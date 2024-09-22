@@ -18,6 +18,8 @@ const options = {
 //app
 const app = express();
 
+app.use(express.static(path.join(__dirname, "static")));
+
 //db
 const dbUrl = process.env.DATABASE || "mongodb://localhost:27017/MernProj";
 mongoose
